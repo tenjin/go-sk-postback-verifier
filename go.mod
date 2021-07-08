@@ -1,6 +1,6 @@
 module github.com/tenjin/go-sk-postback-verifier
 
-go 1.16
+go 1.13
 
 require (
 	github.com/google/certificate-transparency-go v1.1.1
