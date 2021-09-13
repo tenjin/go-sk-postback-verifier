@@ -1,0 +1,73 @@
+# README: https://docs.codeclimate.com/docs/advanced-configuration
+
+# code climate version - required
+version: "2"
+
+# external style patterns. must be loaded before analysis begins
+#  fetch:
+
+# checks to perform. to disable, set "enabled" flag to false
+# (simply removing or commenting out will leave the check on, set to some default value)
+# read more on each check here: https://docs.codeclimate.com/docs/maintainability
+checks:
+  argument-count:
+    enabled: true
+    config:
+      threshold: 4
+  complex-logic:
+    enabled: true
+    config:
+      threshold: 4
+  file-lines:
+    enabled: true
+    config:
+      threshold: 250
+  method-complexity:
+    enabled: true
+    config:
+      threshold: 5
+  method-count:
+    enabled: true
+    config:
+      threshold: 20
+  method-lines:
+    enabled: true
+    config:
+      threshold: 50
+  nested-control-flow:
+    enabled: true
+    config:
+      threshold: 4
+  return-statements:
+    enabled: true
+    config:
+      threshold: 4
+  similar-code:
+    enabled: true
+    config:
+      threshold: # language-specific defaults. an override will affect all languages in the repo
+  identical-code:
+    enabled: true
+    config:
+      threshold: # language-specific defaults. an override will affect all languages in the repo
+
+# plugins. full list of those available:
+# https://docs.codeclimate.com/docs/list-of-engines
+#plugins:
+
+# exclude_patterns. configuration guide:
+# https://docs.codeclimate.com/docs/excluding-files-and-folders
+# we use code climate's default exclusion list as starting point for list below
+exclude_patterns:
+  - "config/"
+  - "db/"
+  - "dist/"
+  - "features/"
+  - "**/node_modules/"
+  - "script/"
+  - "**/spec/"
+  - "**/test/"
+  - "**/tests/"
+  - "**/vendor/"
+  - "**/*_test.go"
+  - "**/*.d.ts"
