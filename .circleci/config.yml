@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: cimg/go:1.16
+      - image: cimg/go:1.27.4
     steps:
       - checkout
       - run: make deps
